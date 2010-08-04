@@ -1,0 +1,27 @@
+<h1>Listing product_types</h1>
+
+<table cellpadding="8">
+  <tr>
+    <th>Product category</th>
+    <th>Nev</th>
+    <th>Leiras</th>
+    <th>Kep</th>
+    <th>Szelesseg</th>
+    <th>Magassag</th>
+    <th>Oldalszam</th>
+    <th>Felfele nyilo</th>
+  </tr>
+
+<% @product_types.each do |product_type| %>
+  <tr>
+    <td><%= product_type.product_category_id %></td>
+    <td><%= link_to product_type.nev, :controller=>"order_items", :action=>"teteladatai", :id=>product_type.id %></td>
+    <td><%= product_type.leiras %></td>
+    <td><%= product_type.kep %></td>
+    <td><%= product_type.szelesseg %></td>
+    <td><%= product_type.magassag %></td>
+    <td><%= product_type.oldalszam %></td>
+    <td><%= product_type.felfele_nyilo %></td>
+  </tr>
+<% end %>
+</table>

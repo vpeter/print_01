@@ -1,0 +1,82 @@
+class AdattablaFeltoltese < ActiveRecord::Migration
+  def self.up
+    Print.create.update_attributes(:nev=>"1+0", :leiras=>"Első oldalon fekete nyomással, hátoldalon nyomás nélkül", :szines_oldalak=>0, :fekete_oldalak=>1)
+    Print.create.update_attributes(:nev=>"1+1", :leiras=>"Első és hátsó oldalon is fekete nyomással", :szines_oldalak=>0, :fekete_oldalak=>2)
+    Print.create.update_attributes(:nev=>"4+0", :leiras=>"Első oldalon színes nyomással, hátoldalon nyomás nélkül", :szines_oldalak=>1, :fekete_oldalak=>0)
+    Print.create.update_attributes(:nev=>"4+1", :leiras=>"Első oldalon színes nyomással, hátoldalon fekete nyomással", :szines_oldalak=>1, :fekete_oldalak=>1)
+    Print.create.update_attributes(:nev=>"4+4", :leiras=>"Első és hátsó oldalon is színes nyomással", :szines_oldalak=>2, :fekete_oldalak=>0)
+
+    PaperCategory.create.update_attributes(:nev=>"Műnyomók", :leiras=>"Mindkét oldalon bevonatos, nyomdai papírok", :kep=>"munyomok.jpg")
+    PaperCategory.create.update_attributes(:nev=>"Kreatív papírok", :leiras=>"Változatos megjelenésű papírok", :kep=>"kreativok.jpg")
+    PaperCategory.create.update_attributes(:nev=>"Speciális papírok", :leiras=>"Öntapadós papírok és fóliák, valamint önátírós papírok", :kep=>"specialis_anyagok.jpg")
+
+    PaperType.create.update_attributes(:paper_category_id=>"1", :nev=>"Fényes műnyomó papír", :leiras=>"Fényes felületű műnyomó papír", :kep=>"fenyes_munyomo.jpg")
+    PaperType.create.update_attributes(:paper_category_id=>"1", :nev=>"Matt műnyomó papír", :leiras=>"Matt felületű műnyomó papír", :kep=>"matt_munyomo.jpg")
+
+    PaperType.create.update_attributes(:paper_category_id=>"2", :nev=>"Rives Tradition fehér", :leiras=>"Szabálytalanul struktúrált felületű kreatív papír", :kep=>"rives_trad_00.jpg")
+    PaperType.create.update_attributes(:paper_category_id=>"2", :nev=>"Rives Tradition natúr fehér", :leiras=>"Szabálytalanul struktúrált felületű kreatív papír", :kep=>"rives_trad_01.jpg")
+    PaperType.create.update_attributes(:paper_category_id=>"2", :nev=>"Rives Tradition elefántcsont", :leiras=>"Szabálytalanul struktúrált felületű kreatív papír", :kep=>"rives_trad_02.jpg")
+    PaperType.create.update_attributes(:paper_category_id=>"2", :nev=>"Rives Tradition pezsgő", :leiras=>"Szabálytalanul struktúrált felületű kreatív papír", :kep=>"rives_trad_03.jpg")
+
+    PaperType.create.update_attributes(:paper_category_id=>"2", :nev=>"Rives Laid fehér", :leiras=>"Szabályosan struktúrált felületű kreatív papír", :kep=>"rives_laid_00.jpg")
+    PaperType.create.update_attributes(:paper_category_id=>"2", :nev=>"Rives Laid natúr fehér", :leiras=>"Szabályosan struktúrált felületű kreatív papír", :kep=>"rives_laid_01.jpg")
+    PaperType.create.update_attributes(:paper_category_id=>"2", :nev=>"Rives Laid elefántcsont", :leiras=>"Szabályosan struktúrált felületű kreatív papír", :kep=>"rives_laid_02.jpg")
+    PaperType.create.update_attributes(:paper_category_id=>"2", :nev=>"Rives Laid pezsgő", :leiras=>"Szabályosan struktúrált felületű kreatív papír", :kep=>"rives_laid_03.jpg")
+
+    PaperType.create.update_attributes(:paper_category_id=>"3", :nev=>"Fényes öntapadós papír", :leiras=>"Fényes felületű öntapadós papír", :kep=>"fenyes_ontapados.jpg")
+    PaperType.create.update_attributes(:paper_category_id=>"3", :nev=>"Matt öntapadós papír", :leiras=>"Matt felületű öntapadós papír", :kep=>"matt_ontapados.jpg")
+
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"1", :gramm=>150, :ar=>15)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"1", :gramm=>200, :ar=>20)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"1", :gramm=>250, :ar=>25)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"1", :gramm=>300, :ar=>30)
+
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"2", :gramm=>150, :ar=>15)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"2", :gramm=>200, :ar=>20)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"2", :gramm=>250, :ar=>25)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"2", :gramm=>300, :ar=>30)
+
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"3", :gramm=>120, :ar=>24)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"3", :gramm=>250, :ar=>50)
+
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"4", :gramm=>120, :ar=>24)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"4", :gramm=>250, :ar=>50)
+
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"5", :gramm=>120, :ar=>24)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"5", :gramm=>250, :ar=>50)
+
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"6", :gramm=>120, :ar=>24)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"6", :gramm=>250, :ar=>50)
+
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"7", :gramm=>120, :ar=>24)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"7", :gramm=>250, :ar=>50)
+
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"8", :gramm=>120, :ar=>24)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"8", :gramm=>250, :ar=>50)
+
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"9", :gramm=>120, :ar=>24)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"9", :gramm=>250, :ar=>50)
+
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"10", :gramm=>120, :ar=>24)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"10", :gramm=>250, :ar=>50)
+
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"11", :gramm=>180, :ar=>40)
+    PaperWeightPrice.create.update_attributes(:paper_type_id=>"12", :gramm=>180, :ar=>40)
+
+    ProductCategory.create.update_attributes(:nev=>"Képeslapok", :leiras=>"Sokféle változatban, postán is feladható", :kep=>"kepeslapok.jpg")
+    ProductCategory.create.update_attributes(:nev=>"Könyvjelzők", :leiras=>"Hasznos kis ajándék a könyvek kedvelőinek", :kep=>"konyvjelzok.jpg")
+
+    ProductType.create.update_attributes(:product_category_id=>"1", :nev=>"A6 álló, 2 oldalas", :leiras=>"A6 álló, 2 oldalas", :kep=>"kepeslap_a6_allo_2old.jpg", :szelesseg=>"100", :magassag=>"150", :oldalszam=>"2", :felfele_nyilo=>"0")
+    ProductType.create.update_attributes(:product_category_id=>"1", :nev=>"A6 fekvő, 2 oldalas", :leiras=>"A6 fekvő, 2 oldalas", :kep=>"kepeslap_a6_fekvo_2old.jpg", :szelesseg=>"150", :magassag=>"100", :oldalszam=>"2", :felfele_nyilo=>"0")
+
+    ProductType.create.update_attributes(:product_category_id=>"1", :nev=>"A6 álló, 4 oldalas, oldalt nyíló", :leiras=>"A6 álló, 4 oldalas, oldalt nyíló", :kep=>"kepeslap_a6_allo_4old.jpg", :szelesseg=>"100", :magassag=>"150", :oldalszam=>"4", :felfele_nyilo=>"0")
+    ProductType.create.update_attributes(:product_category_id=>"1", :nev=>"A6 fekvő, 4 oldalas, oldalt nyíló", :leiras=>"A6 fekvő, 4 oldalas, oldalt nyíló", :kep=>"kepeslap_a6_fekvo_4old.jpg", :szelesseg=>"150", :magassag=>"100", :oldalszam=>"4", :felfele_nyilo=>"0")
+    ProductType.create.update_attributes(:product_category_id=>"1", :nev=>"A6 fekvő, 4 oldalas, felfelé nyíló", :leiras=>"A6 fekvő, 4 oldalas, felfelé nyíló", :kep=>"kepeslap_a6_fekvo_4old_fent.jpg", :szelesseg=>"150", :magassag=>"100", :oldalszam=>"4", :felfele_nyilo=>"1")
+
+    ProductType.create.update_attributes(:product_category_id=>"2", :nev=>"50 x 200 mm-es", :leiras=>"50 x 200 mm-es", :kep=>"konyvjelzo_50x200.jpg", :szelesseg=>"50", :magassag=>"200", :oldalszam=>"2", :felfele_nyilo=>"0")
+    ProductType.create.update_attributes(:product_category_id=>"2", :nev=>"60 x 200 mm-es", :leiras=>"60 x 200 mm-es", :kep=>"konyvjelzo_60x200.jpg", :szelesseg=>"60", :magassag=>"200", :oldalszam=>"2", :felfele_nyilo=>"0")
+  end
+
+  def self.down
+  end
+end

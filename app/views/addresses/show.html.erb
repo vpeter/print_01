@@ -1,0 +1,28 @@
+<p>
+  <b>User:</b>
+  <%=h @address.user_id %>
+</p>
+
+<p>
+  <b>Varos:</b>
+  <%=h @address.varos %>
+</p>
+
+<p>
+  <b>Irsz:</b>
+  <%=h @address.irsz %>
+</p>
+
+<p>
+  <b>Cim:</b>
+  <%=h @address.cim %>
+</p>
+
+<p>
+  <b>Statusz:</b>
+  <%=h @address.statusz %>
+</p>
+
+
+<%= link_to 'Edit', edit_address_path(@address) %> |
+<%= link_to 'Back', addresses_path %>

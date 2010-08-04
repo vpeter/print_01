@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  paper_type_id: 1
+  gramm: 1
+  ar: 1
+  kep: MyString
+
+two:
+  paper_type_id: 1
+  gramm: 1
+  ar: 1
+  kep: MyString

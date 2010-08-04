@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  order_status_id: 1
+  address_szla_id: 1
+  address_szall_id: 1
+  datum_megr: 2010-07-27
+  datum_szall: 2010-07-27
+  megjegyzes: MyText
+
+two:
+  user_id: 1
+  order_status_id: 1
+  address_szla_id: 1
+  address_szall_id: 1
+  datum_megr: 2010-07-27
+  datum_szall: 2010-07-27
+  megjegyzes: MyText

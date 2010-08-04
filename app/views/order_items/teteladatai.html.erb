@@ -1,0 +1,66 @@
+<p>
+  <b>Product category:</b>
+  <%=h @product_type.product_category_id %>
+</p>
+
+<p>
+  <b>Nev:</b>
+  <%=h @product_type.nev %>
+</p>
+
+<p>
+  <b>Leiras:</b>
+  <%=h @product_type.leiras %>
+</p>
+
+<p>
+  <b>Kep:</b>
+  <%=h @product_type.kep %>
+</p>
+
+<p>
+  <b>Szelesseg:</b>
+  <%=h @product_type.szelesseg %>
+</p>
+
+<p>
+  <b>Magassag:</b>
+  <%=h @product_type.magassag %>
+</p>
+
+<p>
+  <b>Oldalszam:</b>
+  <%=h @product_type.oldalszam %>
+</p>
+
+<p>
+  <b>Felfele nyilo:</b>
+  <%=h @product_type.felfele_nyilo %>
+</p>
+<hr />
+
+<h1>New order_item</h1>
+
+<% form_for(@order_item) do |f| %>
+  <%= f.error_messages %>
+    <%#= f.label :print_id %>
+    <%#= f.select(:print, :nev, [['Lisbon', 1], ['Madrid', 2]]) %>
+    <%#= select("post", "person_id", Person.all.collect {|p| [ p.name, p.id ] }, {:prompt => 'Select Person'})%>
+
+    <%= f.label "tétel megnevezése:" %>
+    <%= f.text_field :nev %><br /><br />
+    
+    <%= f.label "nyomás:" %>
+    <%= select :order_item,:print_id, Print.find(:all).collect{|p| [p.nev, p.id]}%><br /><br />
+
+    <%= f.label "papírvastagság:" %>
+    <%= select :order_item,:paper_weight_price_id, PaperWeightPrice.find(:all).collect{|p| [p.gramm, p.id]}%><br /><br />
+
+    <%= f.label "papírtípus:" %>
+    <%= select :order_item,:paper_type_id, PaperType.find(:all).collect{|p| [p.nev, p.id]}%><br /><br />
+
+    <%= f.label "darab" %>
+    <%= f.text_field :darab %><br /><br />
+
+    <%= f.submit "kosárba" %>
+<% end %>

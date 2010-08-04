@@ -1,0 +1,26 @@
+<h1>Listing prints</h1>
+
+<table>
+  <tr>
+    <th>Nev</th>
+    <th>Leiras</th>
+    <th>Szines oldalak</th>
+    <th>Fekete oldalak</th>
+  </tr>
+
+<% @prints.each do |print| %>
+  <tr>
+    <td><%=h print.nev %></td>
+    <td><%=h print.leiras %></td>
+    <td><%=h print.szines_oldalak %></td>
+    <td><%=h print.fekete_oldalak %></td>
+    <td><%= link_to 'Show', print %></td>
+    <td><%= link_to 'Edit', edit_print_path(print) %></td>
+    <td><%= link_to 'Destroy', print, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New print', new_print_path %>

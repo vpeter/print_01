@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  paper_categorie_id: 1
+  nev: MyString
+  leiras: MyText
+
+two:
+  paper_categorie_id: 1
+  nev: MyString
+  leiras: MyText

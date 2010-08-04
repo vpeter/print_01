@@ -1,0 +1,23 @@
+<p>
+  <b>Paper category:</b>
+  <%=h @paper_type.paper_category_id %>
+</p>
+
+<p>
+  <b>Nev:</b>
+  <%=h @paper_type.nev %>
+</p>
+
+<p>
+  <b>Leiras:</b>
+  <%=h @paper_type.leiras %>
+</p>
+
+<p>
+  <b>Kep:</b>
+  <%=h @paper_type.kep %>
+</p>
+
+
+<%= link_to 'Edit', edit_paper_type_path(@paper_type) %> |
+<%= link_to 'Back', paper_types_path %>

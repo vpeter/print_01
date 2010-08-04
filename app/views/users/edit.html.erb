@@ -1,0 +1,28 @@
+<h1>Editing user</h1>
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nev_kereszt %><br />
+    <%= f.text_field :nev_kereszt %>
+  </p>
+  <p>
+    <%= f.label :nev_vezetek %><br />
+    <%= f.text_field :nev_vezetek %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :jelszo %><br />
+    <%= f.text_field :jelszo %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>

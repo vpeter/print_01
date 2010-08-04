@@ -1,0 +1,24 @@
+<h1>Listing paper_categories</h1>
+
+<table>
+  <tr>
+    <th>Nev</th>
+    <th>Leiras</th>
+    <th>Kep</th>
+  </tr>
+
+<% @paper_categories.each do |paper_category| %>
+  <tr>
+    <td><%=h paper_category.nev %></td>
+    <td><%=h paper_category.leiras %></td>
+    <td><%=h paper_category.kep %></td>
+    <td><%= link_to 'Show', paper_category %></td>
+    <td><%= link_to 'Edit', edit_paper_category_path(paper_category) %></td>
+    <td><%= link_to 'Destroy', paper_category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New paper_category', new_paper_category_path %>

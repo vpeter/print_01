@@ -1,0 +1,26 @@
+<h1>Listing paper_types</h1>
+
+<table cellpadding="8">
+  <tr>
+    <th>Paper category</th>
+    <th>Nev</th>
+    <th>Leiras</th>
+    <th>Kep</th>
+  </tr>
+
+<% @paper_types.each do |paper_type| %>
+  <tr>
+    <td><%=h paper_type.paper_category_id %></td>
+    <td><%=h paper_type.nev %></td>
+    <td><%=h paper_type.leiras %></td>
+    <td><%=h paper_type.kep %></td>
+    <td><%= link_to 'Show', paper_type %></td>
+    <td><%= link_to 'Edit', edit_paper_type_path(paper_type) %></td>
+    <td><%= link_to 'Destroy', paper_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New paper_type', new_paper_type_path %>

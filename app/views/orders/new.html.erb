@@ -1,0 +1,39 @@
+<h1>New order</h1>
+
+<% form_for(@order) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :order_status_id %><br />
+    <%= f.text_field :order_status_id %>
+  </p>
+  <p>
+    <%= f.label :address_szla_id %><br />
+    <%= f.text_field :address_szla_id %>
+  </p>
+  <p>
+    <%= f.label :address_szall_id %><br />
+    <%= f.text_field :address_szall_id %>
+  </p>
+  <p>
+    <%= f.label :datum_megr %><br />
+    <%= f.date_select :datum_megr %>
+  </p>
+  <p>
+    <%= f.label :datum_szall %><br />
+    <%= f.date_select :datum_szall %>
+  </p>
+  <p>
+    <%= f.label :megjegyzes %><br />
+    <%= f.text_area :megjegyzes %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', orders_path %>

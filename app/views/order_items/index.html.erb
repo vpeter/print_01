@@ -1,0 +1,34 @@
+<h1>Listing order_items</h1>
+
+<table>
+  <tr>
+    <th>Order</th>
+    <th>Print</th>
+    <th>Paper weight price</th>
+    <th>Paper type</th>
+    <th>Product type</th>
+    <th>Document</th>
+    <th>Darab</th>
+    <th>Ar lezart</th>
+  </tr>
+
+<% @order_items.each do |order_item| %>
+  <tr>
+    <td><%=h order_item.order_id %></td>
+    <td><%=h order_item.print_id %></td>
+    <td><%=h order_item.paper_weight_price_id %></td>
+    <td><%=h order_item.paper_type_id %></td>
+    <td><%=h order_item.product_type_id %></td>
+    <td><%=h order_item.document_id %></td>
+    <td><%=h order_item.darab %></td>
+    <td><%=h order_item.ar_lezart %></td>
+    <td><%= link_to 'Show', order_item %></td>
+    <td><%= link_to 'Edit', edit_order_item_path(order_item) %></td>
+    <td><%= link_to 'Destroy', order_item, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New order_item', new_order_item_path %>

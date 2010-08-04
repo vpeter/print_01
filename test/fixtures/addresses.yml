@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  varos: MyString
+  irsz: 1
+  cim: MyString
+  statusz: 1
+
+two:
+  user_id: 1
+  varos: MyString
+  irsz: 1
+  cim: MyString
+  statusz: 1

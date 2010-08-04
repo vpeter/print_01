@@ -1,0 +1,32 @@
+<h1>Listing orders</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Order status</th>
+    <th>Address szla</th>
+    <th>Address szall</th>
+    <th>Datum megr</th>
+    <th>Datum szall</th>
+    <th>Megjegyzes</th>
+  </tr>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td><%=h order.user_id %></td>
+    <td><%=h order.order_status_id %></td>
+    <td><%=h order.address_szla_id %></td>
+    <td><%=h order.address_szall_id %></td>
+    <td><%=h order.datum_megr %></td>
+    <td><%=h order.datum_szall %></td>
+    <td><%=h order.megjegyzes %></td>
+    <td><%= link_to 'Show', order %></td>
+    <td><%= link_to 'Edit', edit_order_path(order) %></td>
+    <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New order', new_order_path %>

@@ -1,0 +1,23 @@
+<p>
+  <b>Nev kereszt:</b>
+  <%=h @user.nev_kereszt %>
+</p>
+
+<p>
+  <b>Nev vezetek:</b>
+  <%=h @user.nev_vezetek %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @user.email %>
+</p>
+
+<p>
+  <b>Jelszo:</b>
+  <%=h @user.jelszo %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

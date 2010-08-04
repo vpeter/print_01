@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  product_category_id: 1
+  nev: MyString
+  leiras: MyText
+  kep: MyString
+  szelesseg: 1
+  magassag: 1
+  oldalszam: 1
+  felfele_nyilo: 1
+
+two:
+  product_category_id: 1
+  nev: MyString
+  leiras: MyText
+  kep: MyString
+  szelesseg: 1
+  magassag: 1
+  oldalszam: 1
+  felfele_nyilo: 1

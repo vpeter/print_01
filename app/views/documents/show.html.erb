@@ -1,0 +1,13 @@
+<p>
+  <b>User:</b>
+  <%=h @document.user_id %>
+</p>
+
+<p>
+  <b>Filename:</b>
+  <%=h @document.filename %>
+</p>
+
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>

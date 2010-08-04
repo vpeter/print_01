@@ -1,0 +1,24 @@
+<h1>Editing paper_weight_price</h1>
+
+<% form_for(@paper_weight_price) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :paper_type_id %><br />
+    <%= f.text_field :paper_type_id %>
+  </p>
+  <p>
+    <%= f.label :gramm %><br />
+    <%= f.text_field :gramm %>
+  </p>
+  <p>
+    <%= f.label :ar %><br />
+    <%= f.text_field :ar %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @paper_weight_price %> |
+<%= link_to 'Back', paper_weight_prices_path %>

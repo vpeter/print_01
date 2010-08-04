@@ -1,0 +1,43 @@
+<p>
+  <b>Order:</b>
+  <%=h @order_item.order_id %>
+</p>
+
+<p>
+  <b>Print:</b>
+  <%=h @order_item.print_id %>
+</p>
+
+<p>
+  <b>Paper weight price:</b>
+  <%=h @order_item.paper_weight_price_id %>
+</p>
+
+<p>
+  <b>Paper type:</b>
+  <%=h @order_item.paper_type_id %>
+</p>
+
+<p>
+  <b>Product type:</b>
+  <%=h @order_item.product_type_id %>
+</p>
+
+<p>
+  <b>Document:</b>
+  <%=h @order_item.document_id %>
+</p>
+
+<p>
+  <b>Darab:</b>
+  <%=h @order_item.darab %>
+</p>
+
+<p>
+  <b>Ar lezart:</b>
+  <%=h @order_item.ar_lezart %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_item_path(@order_item) %> |
+<%= link_to 'Back', order_items_path %>

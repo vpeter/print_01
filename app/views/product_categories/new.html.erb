@@ -1,0 +1,23 @@
+<h1>New product_category</h1>
+
+<% form_for(@product_category) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nev %><br />
+    <%= f.text_field :nev %>
+  </p>
+  <p>
+    <%= f.label :leiras %><br />
+    <%= f.text_area :leiras %>
+  </p>
+  <p>
+    <%= f.label :kep %><br />
+    <%= f.text_field :kep %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', product_categories_path %>

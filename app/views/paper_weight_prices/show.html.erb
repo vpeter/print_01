@@ -1,0 +1,18 @@
+<p>
+  <b>Paper type:</b>
+  <%=h @paper_weight_price.paper_type_id %>
+</p>
+
+<p>
+  <b>Gramm:</b>
+  <%=h @paper_weight_price.gramm %>
+</p>
+
+<p>
+  <b>Ar:</b>
+  <%=h @paper_weight_price.ar %>
+</p>
+
+
+<%= link_to 'Edit', edit_paper_weight_price_path(@paper_weight_price) %> |
+<%= link_to 'Back', paper_weight_prices_path %>

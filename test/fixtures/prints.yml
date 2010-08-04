@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nev: MyString
+  leiras: MyText
+  szines_oldalak: 1
+  fekete_oldalak: 1
+
+two:
+  nev: MyString
+  leiras: MyText
+  szines_oldalak: 1
+  fekete_oldalak: 1

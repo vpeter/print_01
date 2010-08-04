@@ -1,0 +1,38 @@
+<p>
+  <b>User:</b>
+  <%=h @order.user_id %>
+</p>
+
+<p>
+  <b>Order status:</b>
+  <%=h @order.order_status_id %>
+</p>
+
+<p>
+  <b>Address szla:</b>
+  <%=h @order.address_szla_id %>
+</p>
+
+<p>
+  <b>Address szall:</b>
+  <%=h @order.address_szall_id %>
+</p>
+
+<p>
+  <b>Datum megr:</b>
+  <%=h @order.datum_megr %>
+</p>
+
+<p>
+  <b>Datum szall:</b>
+  <%=h @order.datum_szall %>
+</p>
+
+<p>
+  <b>Megjegyzes:</b>
+  <%=h @order.megjegyzes %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nev_kereszt: MyString
+  nev_vezetek: MyString
+  email: MyString
+  jelszo: MyString
+
+two:
+  nev_kereszt: MyString
+  nev_vezetek: MyString
+  email: MyString
+  jelszo: MyString

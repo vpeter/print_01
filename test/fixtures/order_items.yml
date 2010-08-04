@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order_id: 1
+  print_id: 1
+  paper_weight_price_id: 1
+  paper_type_id: 1
+  product_type_id: 1
+  document_id: 1
+  darab: 1
+  ar_lezart: 1
+
+two:
+  order_id: 1
+  print_id: 1
+  paper_weight_price_id: 1
+  paper_type_id: 1
+  product_type_id: 1
+  document_id: 1
+  darab: 1
+  ar_lezart: 1

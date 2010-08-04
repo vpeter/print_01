@@ -1,0 +1,44 @@
+<h1>Editing order_item</h1>
+
+<% form_for(@order_item) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :order_id %><br />
+    <%= f.text_field :order_id %>
+  </p>
+  <p>
+    <%= f.label :print_id %><br />
+    <%= f.text_field :print_id %>
+  </p>
+  <p>
+    <%= f.label :paper_weight_price_id %><br />
+    <%= f.text_field :paper_weight_price_id %>
+  </p>
+  <p>
+    <%= f.label :paper_type_id %><br />
+    <%= f.text_field :paper_type_id %>
+  </p>
+  <p>
+    <%= f.label :product_type_id %><br />
+    <%= f.text_field :product_type_id %>
+  </p>
+  <p>
+    <%= f.label :document_id %><br />
+    <%= f.text_field :document_id %>
+  </p>
+  <p>
+    <%= f.label :darab %><br />
+    <%= f.text_field :darab %>
+  </p>
+  <p>
+    <%= f.label :ar_lezart %><br />
+    <%= f.text_field :ar_lezart %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @order_item %> |
+<%= link_to 'Back', order_items_path %>
